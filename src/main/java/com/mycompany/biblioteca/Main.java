@@ -14,7 +14,7 @@ public class Main {
  
  }
  
- public static void createCliente() {
+ public static void createClient() {
     System.out.println("--- Crear Cliente ---");
     System.out.print("ID: ");
     String id = sc.nextLine();
