@@ -75,6 +75,20 @@ public class Main {
     }
 }
  
+ public static void deleteClient() {
+    System.out.println("--- Eliminar Cliente ---");
+    System.out.print("ID del cliente a eliminar: ");
+    String id = sc.nextLine();
+
+    Client c = searchClient(id);
+
+    if (c == null) {
+        System.out.println("Cliente no encontrado.");
+    } else {
+        clients.remove(c);
+        System.out.println("Cliente eliminado con éxito.");
+    }
+}
  
  
  
