@@ -7,26 +7,26 @@ package com.mycompany.biblioteca;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
- static ArrayList<Cliente> clientes = new ArrayList<>();
+ static ArrayList<Client> clients = new ArrayList<>();
  static Scanner sc = new Scanner(System.in);
  
  public static void main(String[] args){
  
  }
  
- public static void crearCliente() {
+ public static void createCliente() {
     System.out.println("--- Crear Cliente ---");
     System.out.print("ID: ");
     String id = sc.nextLine();
     System.out.print("Nombre: ");
-    String nombre = sc.nextLine();
+    String name = sc.nextLine();
     System.out.print("Telefono: ");
-    String telefono = sc.nextLine();
+    String phone = sc.nextLine();
     System.out.print("Email: ");
     String email = sc.nextLine();
 
-    Cliente nuevoCliente = new Cliente(id, nombre, telefono, email);
-    clientes.add(nuevoCliente);
+    Client nuevoCliente = new Client(id, name, phone, email);
+    clients.add(nuevoCliente);
     System.out.println("Cliente creado con éxito.");
 }
  
