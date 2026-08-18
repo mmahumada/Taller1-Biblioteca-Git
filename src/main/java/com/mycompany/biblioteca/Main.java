@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Main {
  static ArrayList<Client> clients = new ArrayList<>();
  static ArrayList<Book> books = new ArrayList<>();
+ static ArrayList<Loan> loans = new Arraylist<>();
  static Scanner sc = new Scanner(System.in);
  
  public static void main(String[] args){
@@ -163,7 +164,31 @@ public static void updateBook() {
         System.out.println("Libro eliminado con exito");
     }
 }
-         
+    public static void createLoan(){
+        System.out.println("-- Registrar Prestamo --");
+        System.out.print("ID del prestamo: ");
+        String id = sc.nextLine();
+        System.out.print("ID del cliente: ");
+        String clientId = sc.nextLine();
+        System.out.print("Codigo del libro: ");
+        String bookCode = sc.nextLine();
+        
+        Client c = searchClient(clientId);
+        Book b = searchBook(bookCode);
+        
+        if (c == null) {
+            System.out.println("Cliente no encontrado");
+        } else if (b == null) {
+            System.out.println("Libro no encontrado");
+        }else if (!b.isAvailable()){
+            System.out.println("El libro no esta disponible");
+        } else {
+            Loan newLoan = new Loan(id, c, b);
+            loans.add(newLoan);
+            b.setAvailable(false);
+            System.out.println("Prestamo registrado con exito");
+        }
+    }     
           
 }
  
