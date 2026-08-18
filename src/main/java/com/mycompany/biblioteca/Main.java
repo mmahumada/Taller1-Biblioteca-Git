@@ -188,7 +188,31 @@ public static void updateBook() {
             b.setAvailable(false);
             System.out.println("Prestamo registrado con exito");
         }
-    }     
+    } 
+
+public static void returnLoan(){
+    System.out.println("-- Registrar Devolucion --");
+    System.out.print("ID del prestamo: ");
+    String id = sc.nextLine();
+    
+    Loan loan = null;
+    for (Loan 1: loans) {
+         if (1.getId().equals(id)){
+             loan = 1;
+             break;
+    }
+  }
+  
+    if (loan == null) {
+        System.out.println("Prestamo no encontrado");
+    }else if (loan.getStatus().equals("DEVUELTO")){
+        System.out.println("Este prestamo ya fue devuelto");
+    } else {
+        loan.setStatus("DEVUELTO");
+        loan.getBook().setAvilable(true);
+        System.out.println("Devolucion registrada con exito");
+    }
+}    
           
 }
  
