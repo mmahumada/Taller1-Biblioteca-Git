@@ -148,6 +148,23 @@ public static void updateBook() {
      }
  }
 
+
+ public static void deleteBook() {
+    System.out.println("-- Eliminar Libro --");
+    System.out.print("Codigo del libro a eliminar: ");
+    String code = sc.nextLine();
+
+    Book b = searchBook(code);
+
+    if (b == null) {
+        System.out.println("Libro no encontrado");
+    } else {
+        books.remove(b);
+        System.out.println("Libro eliminado con exito");
+    }
+}
+         
+          
 }
  
  
