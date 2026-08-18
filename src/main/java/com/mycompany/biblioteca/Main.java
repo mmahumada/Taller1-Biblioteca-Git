@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
  static ArrayList<Client> clients = new ArrayList<>();
+ static ArrayList<Book> books = new ArrayList<>();
  static Scanner sc = new Scanner(System.in);
  
  public static void main(String[] args){
@@ -15,7 +16,7 @@ public class Main {
  }
  
  public static void createClient() {
-    System.out.println("--- Crear Cliente ---");
+    System.out.println("-- Crear Cliente --");
     System.out.print("ID: ");
     String id = sc.nextLine();
     System.out.print("Nombre: ");
@@ -31,7 +32,7 @@ public class Main {
 }
  
  public static void listClients() {
-    System.out.println("--- Lista de Clientes ---");
+    System.out.println("-- Lista de Clientes --");
     if (clients.isEmpty()) {
         System.out.println("No hay clientes registrados.");
     } else {
@@ -51,7 +52,7 @@ public class Main {
  }
  
  public static void updateClient() {
-    System.out.println("--- Actualizar Cliente ---");
+    System.out.println("-- Actualizar Cliente --");
     System.out.print("ID del cliente a actualizar: ");
     String id = sc.nextLine();
 
@@ -76,7 +77,7 @@ public class Main {
 }
  
  public static void deleteClient() {
-    System.out.println("--- Eliminar Cliente ---");
+    System.out.println("-- Eliminar Cliente --");
     System.out.print("ID del cliente a eliminar: ");
     String id = sc.nextLine();
 
@@ -89,6 +90,25 @@ public class Main {
         System.out.println("Cliente eliminado con éxito.");
     }
 }
+ 
+ public static void createBook() {
+     System.out.println("-- Crear Libro --");
+     System.out.print("Codigo : ");
+     String code = sc.nextLine();
+     System.out.print("Titulo : ");
+     String title = sc.nextLine();
+     System.out.print("Año de publicacion : ");}
+     String year = sc.nextLine();
+     System.out.print("Autor: ");
+     String author = sc.nextLine();
+     
+     Book newBook = newBook(code, title, year, author);
+     books.add(newBook);
+     System.out.println("Libro creado con exito");
+     
+     
+     
+ }
  
  
  
