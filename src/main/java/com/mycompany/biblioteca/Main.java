@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
  static ArrayList<Client> clients = new ArrayList<>();
  static ArrayList<Book> books = new ArrayList<>();
- static ArrayList<Loan> loans = new Arraylist<>();
+ static ArrayList<Loan> loans = new ArrayList<>();
  static Scanner sc = new Scanner(System.in);
  
  public static void main(String[] args){
@@ -196,9 +196,9 @@ public static void returnLoan(){
     String id = sc.nextLine();
     
     Loan loan = null;
-    for (Loan 1: loans) {
-         if (1.getId().equals(id)){
-             loan = 1;
+    for (Loan l: loans) {
+         if (l.getId().equals(id)){
+             loan = l;
              break;
     }
   }
@@ -209,10 +209,10 @@ public static void returnLoan(){
         System.out.println("Este prestamo ya fue devuelto");
     } else {
         loan.setStatus("DEVUELTO");
-        loan.getBook().setAvilable(true);
+        loan.getBook().setAvailable(true);
         System.out.println("Devolucion registrada con exito");
     }
-}    
+}   
           
 }
  
