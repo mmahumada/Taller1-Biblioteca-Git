@@ -126,3 +126,29 @@ public static Book searchBook(String code){
     }
     return null;
 }
+
+public static void updateBook() {
+     System.out.println("-- Actualizar Libro --");
+     System.out.print("Codigo del libro  : ");
+     String code = sc.nextLine();
+     
+     Book b = searchBook(code);
+     
+     if(b == null){
+         System.out.println("Libro no encontrado");
+     } else {
+         System.out.print("Nuevo titulo: ");
+         String title = sc.nextLine();
+         System.out.print("Nuevo autor: ");
+         String author = sc.nextLine();
+         
+         b.setTitle(title);
+         b.setAuthor(author);
+         System.out.println("Libro actualizado con exito");
+     }
+ }
+
+}
+ 
+ 
+

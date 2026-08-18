@@ -28,7 +28,7 @@ public class Material {
         return title;
     }
     
-    public void setTtitle(String title){
+    public void setTitle(String title){
         this.title = title;
     }
     
