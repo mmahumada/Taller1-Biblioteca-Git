@@ -97,19 +97,23 @@ public class Main {
      String code = sc.nextLine();
      System.out.print("Titulo : ");
      String title = sc.nextLine();
-     System.out.print("Año de publicacion : ");}
+     System.out.print("Año de publicacion : ");
      String year = sc.nextLine();
      System.out.print("Autor: ");
      String author = sc.nextLine();
      
-     Book newBook = newBook(code, title, year, author);
+     Book newBook = new Book(code, title, year, author);
      books.add(newBook);
-     System.out.println("Libro creado con exito");
-     
-     
-     
+     System.out.println("Libro creado con exito");  
  }
  
- 
- 
+  public static void listBooks(){
+      System.out.println("-- Lista de Libros --");
+      if (books.isEmpty()){
+          System.out.println("No hay libros registrados");   
+      } else {
+          for (Book b : books) {
+              System.out.println(b);
+          }
+   }     
 }
