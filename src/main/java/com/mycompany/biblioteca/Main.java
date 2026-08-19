@@ -213,6 +213,17 @@ public static void returnLoan(){
         System.out.println("Devolucion registrada con exito");
     }
 }   
+
+public static void listLoans() {
+    System.out.println("-- Lista de Prestamos --");
+    if (loans.isEmpty()) {
+        System.out.println("No se encuentran prestamos registrados.");
+    } else {
+        for (Loan l : loans){
+            System.out.println(l);
+        }
+    }
+}
           
 }
  
